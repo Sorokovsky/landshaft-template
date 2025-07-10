@@ -1,0 +1,19 @@
+.lawn
+    &__block
+        display: flex
+        gap: 30px
+        @media screen and ( max-width: 991px)
+            flex-wrap: wrap
+            gap: 15px
+        align-items: center
+        justify-content: space-between
+    &__image
+        max-width: 400px
+        height: auto
+        flex: 1 1 auto
+        @media screen and (max-width: 991px)
+            margin: 0 auto
+        img
+            aspect-ratio: 400 / 425
+    &__description
+        flex: 1 1 100%
