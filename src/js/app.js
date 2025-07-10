@@ -1,2 +1,3 @@
-import { isWebp } from "./modules/functions.js";
+import { isWebp, enableBurgerMenu } from "./modules/functions.js";
 isWebp();
+enableBurgerMenu();
