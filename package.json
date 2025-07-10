@@ -39,6 +39,7 @@
     "gulp-zip": "^6.1.0",
     "rename": "^1.0.4",
     "sass": "^1.89.2",
+    "swiper": "^11.2.10",
     "webp-converter": "^2.2.3",
     "webpack-stream": "^7.0.0"
   }
