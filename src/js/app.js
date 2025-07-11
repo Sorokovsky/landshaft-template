@@ -2,7 +2,7 @@ import { isWebp, enableBurgerMenu } from "./modules/functions.js";
 isWebp();
 enableBurgerMenu();
 import Swiper from "swiper";
-import { Autoplay } from 'swiper/modules';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 new Swiper('.hero__slider', {
     modules: [Autoplay],
     direction: 'horizontal',
@@ -11,5 +11,22 @@ new Swiper('.hero__slider', {
 
     autoplay: {
         delay: 5000,
+    },
+});
+
+new Swiper('.geogrid__slider', {
+    modules: [Autoplay, Pagination, Navigation],
+    direction: 'horizontal',
+    loop: true,
+    autoplay: {
+        delay: 5000,
+    },
+    pagination: {
+        el: '.geogrid__pagination',
+        clickable: true
+    },
+    navigation: {
+        nextEl: '.geogrid__button-next',
+        prevEl: '.geogrid__button-prev',
     },
 });
