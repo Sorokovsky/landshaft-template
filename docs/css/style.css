@@ -1152,6 +1152,14 @@ section:not(:last-child) {
   aspect-ratio: 1;
 }
 
+.gallery__slider {
+  max-width: 900px;
+}
+
+.gallery img {
+  aspect-ratio: 900/550;
+}
+
 .footer {
   margin-top: 60px;
   background-color: #FAD4D3;

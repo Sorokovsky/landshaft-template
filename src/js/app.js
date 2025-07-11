@@ -48,3 +48,20 @@ new Swiper('.services__slider', {
         prevEl: '.services__prev',
     },
 });
+
+new Swiper('.gallery__slider', {
+    modules: [Autoplay, Pagination, Navigation],
+    direction: 'horizontal',
+    loop: true,
+    autoplay: {
+        delay: 2000,
+    },
+    pagination: {
+        el: '.gallery__pagination',
+        clickable: true
+    },
+    navigation: {
+        nextEl: '.gallery__next',
+        prevEl: '.gallery__prev',
+    },
+});
