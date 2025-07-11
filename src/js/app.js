@@ -31,3 +31,20 @@ new Swiper('.geogrid__slider', {
         prevEl: '.geogrid__button-prev',
     },
 });
+
+new Swiper('.services__slider', {
+    modules: [Autoplay, Pagination, Navigation],
+    direction: 'horizontal',
+    loop: true,
+    autoplay: {
+        delay: 2000,
+    },
+    pagination: {
+        el: '.services__pagination',
+        clickable: true
+    },
+    navigation: {
+        nextEl: '.geogrid__button-next',
+        prevEl: '.geogrid__button-prev',
+    },
+});

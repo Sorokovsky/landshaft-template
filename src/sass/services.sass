@@ -1,0 +1,25 @@
+.services
+    &__cards
+        display: flex
+        flex-direction: column
+        gap: 30px
+    &__card
+        display: flex
+        align-items: center
+        justify-content: center
+        gap: 20px
+        & > * 
+            flex: 1 1 auto
+        &:nth-child(even)
+            flex-direction: row-reverse
+    &__slider
+        flex: 0 1 500px
+        margin: 0
+        img
+            aspect-ratio: 1
+    @media screen and ( max-width: 700px)
+        &__card, &__card:nth-child(even)
+            flex-direction: column
+        &__slider
+            flex: 1 1 auto
+            max-width: 500px
