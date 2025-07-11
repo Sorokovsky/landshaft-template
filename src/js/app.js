@@ -3,6 +3,7 @@ isWebp();
 enableBurgerMenu();
 import Swiper from "swiper";
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+
 new Swiper('.hero__slider', {
     modules: [Autoplay],
     direction: 'horizontal',
@@ -10,7 +11,7 @@ new Swiper('.hero__slider', {
     allowTouchMove: false,
 
     autoplay: {
-        delay: 5000,
+        delay: 2000,
     },
 });
 
@@ -19,7 +20,7 @@ new Swiper('.geogrid__slider', {
     direction: 'horizontal',
     loop: true,
     autoplay: {
-        delay: 5000,
+        delay: 2000,
     },
     pagination: {
         el: '.geogrid__pagination',
