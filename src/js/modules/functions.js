@@ -21,18 +21,39 @@ export function enableBurgerMenu() {
 function enableToggleMobileMenu() {
     const burgerSelector = ".burger";
     const activeClass = "active";
+    const burger = document.querySelector(burgerSelector);
+    burger.addEventListener("click", event => {
+        event.preventDefault();
+        if (burger.classList.contains(activeClass)) {
+            closeMobileMenu()
+        } else {
+            openMobileMenu();
+        }
+    });
+}
+
+function openMobileMenu() {
+    const burgerSelector = ".burger";
+    const activeClass = "active";
     const mobileMenuSelector = "nav.header__mobile";
     const lockClass = "lock";
     const burger = document.querySelector(burgerSelector);
     const mobileMenu = document.querySelector(mobileMenuSelector);
-    burger.addEventListener("click", event => {
-        event.preventDefault();
-        const { target } = event;
-        document.body.classList.toggle(lockClass);
-        const burgerSwitcher = target.closest(burgerSelector);
-        burgerSwitcher.classList.toggle(activeClass);
-        mobileMenu.classList.toggle(activeClass);
-    });
+    document.body.classList.add(lockClass);
+    burger.classList.add(activeClass);
+    mobileMenu.classList.add(activeClass);
+}
+
+function closeMobileMenu() {
+    const burgerSelector = ".burger";
+    const activeClass = "active";
+    const mobileMenuSelector = "nav.header__mobile";
+    const lockClass = "lock";
+    const burger = document.querySelector(burgerSelector);
+    const mobileMenu = document.querySelector(mobileMenuSelector);
+    document.body.classList.remove(lockClass);
+    burger.classList.remove(activeClass);
+    mobileMenu.classList.remove(activeClass);
 }
 
 function enableHeaderOffset() {
@@ -50,4 +71,48 @@ function addHeaderOffset() {
     const offset = `${offsetValue}px`;
     mobileMenu.style.paddingTop = offset;
     mobileMenu.style.paddingBottom = offset;
+}
+
+export function enableMenuScrollings() {
+    const links = document.querySelectorAll(".menu a");
+    links.forEach(link => {
+        link.addEventListener("click", event => {
+            const target = event.target.closest("a");
+            const href = target.href;
+            const startIndex = href.indexOf("#");
+            if (startIndex !== -1) {
+                event.preventDefault();
+                let selector = "";
+                for (let i = startIndex; i < href.length; i++) {
+                    const element = href[i];
+                    selector += element;
+                }
+                scroll(selector);
+            }
+        });
+    });
+}
+
+function scroll(selector) {
+    const headerSelector = "header.header";
+    const header = document.querySelector(headerSelector);
+    const headerHeight = header.offsetHeight;
+    const offsetValue = headerHeight;
+    let top = 0;
+    let block;
+    if (selector == "#") {
+        block = document.body;
+    } else {
+        block = document.querySelector(selector);
+    }
+    if (block !== undefined && block !== null) {
+        top = block.offsetTop - offsetValue;
+        
+    }
+    closeMobileMenu();
+    window.scroll({
+        top: top,
+        left: 0,
+        behavior: "smooth",
+    });
 }

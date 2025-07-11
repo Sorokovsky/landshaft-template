@@ -1,8 +1,10 @@
-import { isWebp, enableBurgerMenu } from "./modules/functions.js";
-isWebp();
-enableBurgerMenu();
+import { isWebp, enableBurgerMenu, enableMenuScrollings } from "./modules/functions.js";
 import Swiper from "swiper";
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+
+isWebp();
+enableBurgerMenu();
+enableMenuScrollings();
 
 new Swiper('.hero__slider', {
     modules: [Autoplay],
