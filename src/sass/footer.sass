@@ -1,0 +1,43 @@
+@use "settings" as *
+.footer
+    margin-top: 60px
+    @media screen and (max-width: 991px)
+        margin-top: 30px
+    background-color: $mainBgColor
+    padding-top: 30px
+    padding-bottom: 30px
+    &__container
+        display: flex
+        align-items: center
+        justify-content: space-between
+        flex-wrap: wrap
+        gap: 15px
+        font-size: 20px
+        color: $headerLinkColor
+    &__avatar
+        height: 100px
+        width: 100px
+        overflow: hidden
+        border-radius: 50%
+        img 
+            aspect-ratio: 1
+    &__socials
+        display: flex
+        align-items: center
+        flex-wrap: wrap
+        gap: 15px
+    a
+        transition: all $animationDuration ease
+        display: flex
+        align-items: center
+        gap: 5px
+        vertical-align: middle
+        span
+            line-height: 1.4
+        @media screen and (hover: hover)
+            &:hover
+                color: $headerLinkHoverColor
+    &__contacts
+        display: flex
+        flex-direction: column
+        gap: 5px
