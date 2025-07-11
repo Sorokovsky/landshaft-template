@@ -110,3 +110,24 @@
             transform: rotate(-45deg) translate(7px, 3px)
     @media screen and (max-width: 991px)
         display: block
+.call
+    position: fixed
+    z-index: 99
+    width: 70px
+    height: 70px
+    right: 50px
+    bottom: 50px
+    background-color: $mainBgColor
+    display: flex
+    justify-content: center
+    align-items: center
+    color: $headerLinkColor
+    border-radius: 50%
+    font-size: 30px
+    transition: all $animationDuration ease
+    box-shadow: -1px -1px 21px 0px rgba(0,0,0,0.75)
+    @media screen and ( hover: hover)
+        &:hover
+            color: $headerLinkHoverColor
+            background-color: $sliderControllActiveColor
+            box-shadow: -1px -1px 21px 0px rgba(0,0,0,0.5)
