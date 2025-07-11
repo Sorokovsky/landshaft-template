@@ -1,0 +1,17 @@
+.complex
+    &__cards
+        display: grid
+        grid-template-columns: repeat(2, minmax(300px, 500px))
+        @media screen and (max-width: 700px)
+            grid-template-columns: 1fr
+        justify-content: center
+        align-items: flex-start
+        gap: 20px
+    &__card
+        img
+            aspect-ratio: 500 / 333
+    &__image
+        &:not(:last-child)
+            margin-bottom: 20px
+            @media screen and ( max-width: 991px)
+                margin-bottom: 10px
