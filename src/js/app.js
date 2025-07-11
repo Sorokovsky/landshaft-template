@@ -44,7 +44,7 @@ new Swiper('.services__slider', {
         clickable: true
     },
     navigation: {
-        nextEl: '.geogrid__button-next',
-        prevEl: '.geogrid__button-prev',
+        nextEl: '.services__next',
+        prevEl: '.services__prev',
     },
 });
