@@ -10,8 +10,24 @@
     &__card
         img
             aspect-ratio: 500 / 333
+        position: relative
+        z-index: 1
+        transition: .8s all ease
+        &.hide
+            opacity: 0
+            &:nth-child(even)
+                transform: translateX(100%)
+            &:nth-child(odd)
+                transform: translateX(-100%)
     &__image
         &:not(:last-child)
             margin-bottom: 20px
             @media screen and ( max-width: 991px)
                 margin-bottom: 10px
+    &__title
+        position: relative
+        z-index: 1
+        transition: .8s all ease
+        &.hide
+            opacity: 0
+            transform: translateY(-100%)

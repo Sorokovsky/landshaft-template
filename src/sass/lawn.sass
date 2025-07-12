@@ -1,4 +1,12 @@
+@use "settings" as *
 .lawn
+    &__title
+        position: relative
+        z-index: 1
+        transition: .8s all ease
+        &.hide
+            transform: translateY(-100%)
+            opacity: 0
     &__block
         display: flex
         gap: 30px
@@ -11,9 +19,21 @@
         max-width: 400px
         height: auto
         flex: 1 1 auto
+        position: relative
+        z-index: 1
+        transition: .8s all ease
+        &.hide
+            transform: translateX(-100%)
+            opacity: 0
         @media screen and (max-width: 991px)
             margin: 0 auto
         img
             aspect-ratio: 400 / 425
     &__description
         flex: 1 1 100%
+        position: relative
+        z-index: 1
+        transition: .8s all ease
+        &.hide
+            opacity: 0
+            transform: translateX(100%)

@@ -1,5 +1,20 @@
 .gallery
+    &__container
+        overflow: hidden
+    &__title
+        position: relative
+        z-index: 1
+        transition: .8s all ease
+        &.hide
+            opacity: 0
+            transform: translateY(-100%)
     &__slider
         max-width: 900px
+        position: relative
+        z-index: 1
+        transition: .8s all ease
+        &.hide
+            opacity: 0
+            transform: translateY(50%)
     img
         aspect-ratio: 900 / 550

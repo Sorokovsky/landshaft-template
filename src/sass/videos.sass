@@ -1,10 +1,25 @@
 .videos
+    &__container
+        overflow: hidden
+    &__title
+        position: relative
+        z-index: 1
+        transition: .8s all ease
+        &.hide
+            opacity: 0
+            transform: translateY(-100%)
     &__block
         display: flex
         align-items: flex-start
         justify-content: center
         flex-wrap: wrap
         gap: 30px
+        position: relative
+        z-index: 1
+        transition: .8s all ease
+        &.hide
+            opacity: 0
+            transform: translateY(10%)
         video
             aspect-ratio: 576 / 1024
     &__card

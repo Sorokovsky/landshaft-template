@@ -116,3 +116,19 @@ function scroll(selector) {
         behavior: "smooth",
     });
 }
+
+export function enableScrollingAnimations() {
+    const animSelector = "[data-animation]";
+    const hideClass = "hide";
+    const animItems = document.querySelectorAll(animSelector);
+    animItems.forEach(item => item.classList.add(hideClass))
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.remove(hideClass);
+                
+            }
+        })
+    });
+    animItems.forEach(element => observer.observe(element));
+}

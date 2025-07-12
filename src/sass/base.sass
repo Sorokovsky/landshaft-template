@@ -1,9 +1,11 @@
 @use "settings" as *
-@use "swiper.css"
+@use "../../node_modules/swiper/swiper-bundle.css"
 *
     margin: 0
     padding: 0
     box-sizing: border-box
+html
+    overflow-x: hidden
 body
     min-height: 100vh
 .lock
@@ -22,6 +24,7 @@ a
     max-width: 200px
     display: block
 .container
+    overflow-x: hidden
     max-width: $containerWidth + $containerHorizontalPadding * 2
     margin: 0 auto
     padding: 0 $containerHorizontalPadding

@@ -1,5 +1,20 @@
 .geogrid
     &__container
         max-width: 730px
+        overflow-y: hidden
         img
             aspect-ratio: 1
+    &__title
+        position: relative
+        z-index: 1
+        transition: .8s all ease
+        &.hide
+            opacity: 0
+            transform: translateY(-100%)
+    &__slider
+        position: relative
+        z-index: 1
+        transition: .8s all ease
+        &.hide
+            opacity: 0
+            transform: translateY(50%)        
